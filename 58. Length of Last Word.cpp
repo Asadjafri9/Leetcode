@@ -1,6 +1,6 @@
 https://leetcode.com/problems/length-of-last-word/submissions/1146348436
 class Solution {
-public:
+public: 
     int lengthOfLastWord(string s) {
         int count =0 ;
         
