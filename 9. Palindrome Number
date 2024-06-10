@@ -1,0 +1,40 @@
+https://leetcode.com/problems/palindrome-number/submissions/1136571643
+
+bool isPalindrome(int x) {
+    if(x<0)
+    {
+        return false;
+    }
+    else{
+    int count = 0;
+    int a = x,flag=1 ; 
+    while(a!=0)
+    {
+        a/=10; 
+        count++;
+    }
+    int* ptr=(int*)calloc(count,sizeof(int));
+    for(int i = 0 ; i < count ; i++ )
+    {   
+        int t =  x % 10;
+        *(ptr+i) = t;
+        x/=10;
+
+    }
+     for(int i = 0 , j = count -1  ; i < count , j>=0 ; i++,j-- )
+    {   
+      
+            if(*(ptr+i)!=*(ptr+j))
+            {
+                flag = 0 ;
+            }
+        
+    }
+    free(ptr);
+    if(flag == 1 )
+    return true;
+    else
+    return false;
+    }
+
+}
