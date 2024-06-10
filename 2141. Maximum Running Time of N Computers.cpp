@@ -1,5 +1,4 @@
 https://leetcode.com/problems/maximum-running-time-of-n-computers/submissions/1284177045 
-
 class Solution {
 public:
     typedef long long ll;
